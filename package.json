@@ -1,0 +1,15 @@
+{
+  "name": "mfinstaller",
+  "version": "1.0.0",
+  "description": "Installer for MonsterFarm",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "J Riley Harrington <jrileyharrington@gmail.com>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "electron": "^3.0.10"
+  }
+}
