@@ -1,8 +1,11 @@
 const electron = require('electron');
+const images = require('./images');
 
 let createWindow = () => {
     let win = new electron.BrowserWindow({ width: 800, height: 600 });
-    let tray = new electron.Tray('icons/tray.png');
+    let trayImage = images.tray();
+    console.log(trayImage);
+    let tray = new electron.Tray(trayImage);
     tray.setToolTip('This is my application.')
     const contextMenu = electron.Menu.buildFromTemplate([
         {label: 'Item1', type: 'radio'},
@@ -13,5 +16,4 @@ let createWindow = () => {
     tray.setContextMenu(contextMenu)
     win.loadFile('index.html');
 }
-electron.app.dock.setIcon('icons/dock.png');
 electron.app.on('ready',createWindow);
