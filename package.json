@@ -1,23 +1,21 @@
 {
-  "name": "mfinstaller",
+  "name": "mf-installer",
   "version": "1.0.0",
-  "description": "Installer for MonsterFarm",
-  "main": "main.js",
+  "description": "Installer for MonsterFarm game",
   "scripts": {
-    "start": "electron .",
-    "build": "rm -rf dist && npm run build-mac && npm run build-lin && npm run build-win --asar",
-    "build-mac": "electron-packager . MFInstaller --platform=darwin --out=dist",
-    "build-lin": "echo \"No Linux Build\"",
-    "build-win": "echo \"No Windows Build\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "npm run build && electron ./bin/main.js"
   },
-  "author": "J Riley Harrington <jrileyharrington@gmail.com>",
+  "author": "J Riley Harrington <jrileyharrington@gmail.com",
   "license": "UNLICENSED",
-  "devDependencies": {
-    "electron": "^3.0.10",
-    "electron-packager": "^13.0.0"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "mustard-ui": "0.0.8"
+    "electron": "^3.0.10",
+    "mustard-ui": "0.0.8",
+    "riot": "^3.13.2",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.2"
   }
 }

@@ -1,28 +1,18 @@
-<head>
-    <link rel="stylesheet" type="text/css" href="node_modules/mustard-ui/dist/css/mustard-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
-</head>
-<body>
-    <div class="container">
-        <h1 class="align-center">Monster Farm Installer</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MFInstaller</title>
+        <link rel="stylesheet" type="text/css" href="./node_modules/mustard-ui/dist/css/mustard-ui.min.css">
+    </head>
+    <body>
+        <app>
+            <login></login>
+        </app>
+    </body>
 
-        <form>
-            <div class="row">
-                <div class="col col-sm-6">
-                    <div class="form-control">
-                        <label>Email</label>
-                        <input class="invalid" type="text" placeholder="Email">
-                        <p class="validation-error">Please enter a valid value.</p>
-                    </div>
-                </div>
-                <div class="col col-sm-4">
-                    <div class="form-control">
-                        <label>Username</label>
-                        <input class="invalid" type="text" placeholder="Enter valid info">
-                        <p class="validation-error">Please enter a valid value.</p>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</body>
+    <script type="riot/tag" src="./src/tags/app.tag"></script>
+    <script type="riot/tag" src="./src/tags/login.tag"></script>
+    <script src="./node_modules/riot/riot+compiler.min.js"></script>
+    <script>riot.mount('*')</script>
+</html>
